@@ -1,13 +1,15 @@
-<h1>Listing grads</h1>
+<h2>All Grads</h2>
 
-<table>
+<%= link_to '+ New Grad', new_grad_path, class: 'btn btn-success' %>
+
+<table class="table table-striped table-hover table-bordered">
   <thead>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Student num</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Student #</th>
       <th>Email</th>
-      <th>Graduation date</th>
+      <th>Graduation Date</th>
       <th>Notes</th>
       <th colspan="3"></th>
     </tr>
@@ -32,4 +34,3 @@
 
 <br>
 
-<%= link_to 'New Grad', new_grad_path %>

@@ -8,9 +8,44 @@
 </head>
 <body>
 
+
+<!--
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+ 	<div class="container">
+	    <div class="navbar-header">
+ 		    <a class="navbar-brand" href="#">Alumni Credit Suite</a>
+ 		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Grads</a></li>
+			<li><a href="#">Link</a></li>
+			<li><a href="#">Link</a></li>
+		</ul> 		
+ 	</div> 
+</nav>
+-->
+
 <div class="container">
 
-<%= yield %>
+	<nav class="navbar navbar-inverse" role="navigation">
+	 	<div class="container">
+		    <div class="navbar-header">
+				<%= link_to 'Alumni Credit Suite', root_url, class: 'navbar-brand' %>		    	
+	 		</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><%= link_to 'Grads', grads_path %></li>
+	            <li><a href="#">Positions</a></li>
+	            <li><a href="#">Companies</a></li>
+	            <li><a href="#">Projects</a></li>
+				<li><a href="#">Awards</a></li>
+				<li><a href="#">Charts</a></li>
+				<li><a href="#">Tags</a></li>
+
+			</ul> 	
+
+	 	</div> 
+	</nav>
+
+	<%= yield %>
 
 </div>
 

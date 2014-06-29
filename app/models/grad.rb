@@ -1,7 +1,5 @@
 class Grad < ActiveRecord::Base
 
-	validates :first_name, presence: true
-	validates :last_name, presence: true
-	validates :student_num, presence: true
+	validates_presence_of :first_name, :last_name, :student_num, :email, :graduation_date
 
 end
