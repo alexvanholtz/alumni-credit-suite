@@ -1,10 +1,12 @@
-<h1>Listing award_ceremonies</h1>
+<h1>Award Ceremonies</h1>
 
-<table>
+<%= link_to '+ New Award Ceremony', new_award_ceremony_path, class: 'btn btn-success' %>
+
+<table class="table table-striped table-hover table-bordered">
   <thead>
     <tr>
       <th>Ceremony</th>
-      <th>Ismajor</th>
+      <th>Is Major Ceremony?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +24,3 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Award ceremony', new_award_ceremony_path %>
