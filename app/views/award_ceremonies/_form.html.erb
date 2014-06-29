@@ -1,0 +1,25 @@
+<%= form_for(@award_ceremony) do |f| %>
+  <% if @award_ceremony.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@award_ceremony.errors.count, "error") %> prohibited this award_ceremony from being saved:</h2>
+
+      <ul>
+      <% @award_ceremony.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ceremony %><br>
+    <%= f.text_field :ceremony %>
+  </div>
+  <div class="field">
+    <%= f.label :isMajor %><br>
+    <%= f.check_box :isMajor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

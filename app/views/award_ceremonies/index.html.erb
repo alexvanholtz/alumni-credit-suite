@@ -1,0 +1,27 @@
+<h1>Listing award_ceremonies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ceremony</th>
+      <th>Ismajor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @award_ceremonies.each do |award_ceremony| %>
+      <tr>
+        <td><%= award_ceremony.ceremony %></td>
+        <td><%= award_ceremony.isMajor %></td>
+        <td><%= link_to 'Show', award_ceremony %></td>
+        <td><%= link_to 'Edit', edit_award_ceremony_path(award_ceremony) %></td>
+        <td><%= link_to 'Destroy', award_ceremony, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Award ceremony', new_award_ceremony_path %>

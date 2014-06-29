@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140628223712) do
+ActiveRecord::Schema.define(version: 20140629192406) do
+
+  create_table "award_ceremonies", force: true do |t|
+    t.string   "ceremony"
+    t.boolean  "isMajor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "grads", force: true do |t|
     t.string   "first_name"

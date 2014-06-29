@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :grads
+  
+  resources :grads, 
+            :award_ceremonies, :awards, :controller => "award_ceremonies"
+
 
   root to: "grads#index"
 

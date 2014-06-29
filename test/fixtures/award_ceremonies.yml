@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ceremony: MyString
+  isMajor: false
+
+two:
+  ceremony: MyString
+  isMajor: false

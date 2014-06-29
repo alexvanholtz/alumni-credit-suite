@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ceremony:</strong>
+  <%= @award_ceremony.ceremony %>
+</p>
+
+<p>
+  <strong>Ismajor:</strong>
+  <%= @award_ceremony.isMajor %>
+</p>
+
+<%= link_to 'Edit', edit_award_ceremony_path(@award_ceremony) %> |
+<%= link_to 'Back', award_ceremonies_path %>

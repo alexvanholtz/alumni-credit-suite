@@ -11,4 +11,8 @@ class CreateGrads < ActiveRecord::Migration
       t.timestamps
     end
   end
+
+  def self.down
+    drop_table :grads
+  end  
 end
