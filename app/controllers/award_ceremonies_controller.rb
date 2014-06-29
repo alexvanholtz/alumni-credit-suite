@@ -1,6 +1,9 @@
 class AwardCeremoniesController < ApplicationController
   before_action :set_award_ceremony, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb "Home", :root_path
+  add_breadcrumb "Award Ceremonies", :award_ceremonies_path
+
   # GET /award_ceremonies
   # GET /award_ceremonies.json
   def index
@@ -10,6 +13,7 @@ class AwardCeremoniesController < ApplicationController
   # GET /award_ceremonies/1
   # GET /award_ceremonies/1.json
   def show
+    add_breadcrumb @award_ceremony.ceremony, :award_ceremony_path
   end
 
   # GET /award_ceremonies/new
@@ -19,6 +23,8 @@ class AwardCeremoniesController < ApplicationController
 
   # GET /award_ceremonies/1/edit
   def edit
+    add_breadcrumb @award_ceremony.ceremony, :award_ceremony_path
+    add_breadcrumb 'Edit', :edit_award_ceremony_path
   end
 
   # POST /award_ceremonies

@@ -1,6 +1,9 @@
 class GradsController < ApplicationController
   before_action :set_grad, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb "Home", :root_path
+  add_breadcrumb "Grads", :grads_path
+
   # GET /grads
   # GET /grads.json
   def index
@@ -10,15 +13,19 @@ class GradsController < ApplicationController
   # GET /grads/1
   # GET /grads/1.json
   def show
+    add_breadcrumb @grad.full_name, :grad_path
   end
 
   # GET /grads/new
   def new
+    add_breadcrumb "New", :new_grad_path
     @grad = Grad.new
   end
 
   # GET /grads/1/edit
   def edit
+    add_breadcrumb @grad.full_name, :grad_path
+    add_breadcrumb "Edit", :edit_grad_path
   end
 
   # POST /grads
