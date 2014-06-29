@@ -1,0 +1,35 @@
+<h1>Listing grads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Student num</th>
+      <th>Email</th>
+      <th>Graduation date</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grads.each do |grad| %>
+      <tr>
+        <td><%= grad.first_name %></td>
+        <td><%= grad.last_name %></td>
+        <td><%= grad.student_num %></td>
+        <td><%= grad.email %></td>
+        <td><%= grad.graduation_date %></td>
+        <td><%= grad.notes %></td>
+        <td><%= link_to 'Show', grad %></td>
+        <td><%= link_to 'Edit', edit_grad_path(grad) %></td>
+        <td><%= link_to 'Destroy', grad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grad', new_grad_path %>
